@@ -76,7 +76,14 @@ ORDER BY COUNT(*) DESC;
 
 -- MISSION 4
 -- Your query here;
+INSERT INTO observations VALUES
+(501,1,2,'Mario','2026-05-22',-20.594380,139.54472,3);
 
+UPDATE observations
+SET observer = 'observer9876589'
+WHERE observer = 'Mario';
+
+delete from observations where id = 501;
 -- MISSION 5
 -- Your query here;
 

@@ -60,6 +60,19 @@ GROUP BY observer
 ORDER BY COUNT(*) DESC;
 -- MISSION 3
 -- Your query here;
+SELECT * 
+FROM observations AS obs
+JOIN regions AS reg ON obs.region_id = reg.id;
+
+SELECT obs.id, spe.scientific_name
+FROM observations AS obs
+JOIN species AS spe ON obs.species_id = spe.id;
+
+SELECT obs.region_id, spe.scientific_name, COUNT(*) 
+FROM observations AS obs
+JOIN species AS spe ON obs.species_id = spe.id
+GROUP BY  obs.region_id, spe.scientific_name
+ORDER BY COUNT(*) DESC;
 
 -- MISSION 4
 -- Your query here;

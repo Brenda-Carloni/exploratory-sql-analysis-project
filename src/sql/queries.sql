@@ -32,16 +32,38 @@ SELECT COUNT(*) FROM observations WHERE observation_date = '1998-08-08';
 
 -- MISSION 2
 -- Your query here;
+SELECCIONAR region_id, CONTAR ( * )
+A partir de observaciones
+AGRUPAR POR region_id
+CONTAR  ( * ) = (​
+    SELECCIONAR  MÁXIMO (cuenta) DE (
+        SELECCIONAR  CONTAR ( * ) COMO cuenta
+        A partir de observaciones
+        AGRUPAR POR region_id
+    ) como subconsulta
+);
 
+SELECCIONAR species_id, CONTAR ( * )
+A partir de observaciones
+AGRUPAR POR species_id
+ORDENAR POR  CONTEO ( * ) DESC
+LÍMITE  5 ;
+
+SELECCIONAR species_id, CONTAR ( * )
+A partir de observaciones
+AGRUPAR POR species_id
+CONTAR  ( * ) > 4 ;​ 
+
+SELECCIONAR observador, CONTAR ( * )
+A partir de observaciones
+AGRUPADO POR observador
+ORDENAR POR  CONTEO ( * ) DESC ;
 
 -- MISSION 3
 -- Your query here;
 
 -- MISSION 4
 -- Your query here;
-
-
-
 
 -- MISSION 5
 -- Your query here;

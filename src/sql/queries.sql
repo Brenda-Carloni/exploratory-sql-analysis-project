@@ -23,6 +23,12 @@ SELECT * FROM observations;
 
 -- MISSION 1
 -- Your query here;
+SELECT * FROM observations LIMIT 10,
+SELECT DISTINCT region_id FROM observations;
+SELECT DISTINCT COUNT(species_id) FROM observations;
+SELECT COUNT(*) FROM observations WHERE region_id = 2;
+SELECT COUNT(*) FROM observations WHERE observation_date = '1998-08-08';
+
 
 -- MISSION 2
 -- Your query here;
@@ -31,9 +37,10 @@ SELECT * FROM observations;
 -- MISSION 3
 -- Your query here;
 
-
 -- MISSION 4
 -- Your query here;
+
+
 
 
 -- MISSION 5
